@@ -1,9 +1,10 @@
 package com.lpc.reflect;
 
 public class ReflectServiceImpl {
-    public void sayHello(String name){
-        System.err.println("hello"+name);
+    public void sayHello(String name,String ee){
+        System.err.println("hello"+name+" HI"+ee);
     }
+
 
     public ReflectServiceImpl(){
 

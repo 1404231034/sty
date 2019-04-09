@@ -1,4 +1,4 @@
-package com.lpc.test;
+package com.lpc.reflect;
 
 import com.lpc.reflect.ReflectServiceImpl;
 
@@ -14,7 +14,7 @@ public class TestReflect {
         try {
             //反射无参构造方法创建实例
             ReflectServiceImpl o = (ReflectServiceImpl) Class.forName("com.lpc.reflect.ReflectServiceImpl").newInstance();
-            o.sayHello(" www");
+            o.sayHello(" www","lpc");
 
         } catch (InstantiationException e) {
             e.printStackTrace();
@@ -26,8 +26,8 @@ public class TestReflect {
         ReflectServiceImpl k = new ReflectServiceImpl();
         try {
             //反射有参方法
-            Method method = ReflectServiceImpl.class.getMethod("sayHello", String.class);
-            method.invoke(k," lpc");
+            Method method = ReflectServiceImpl.class.getMethod("sayHello", String.class, String.class);
+            method.invoke(k," lpc","fokosk");
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

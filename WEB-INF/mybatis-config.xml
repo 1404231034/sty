@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.lpc.mybatis.pojo.Role" alias="role"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <!-- 事务管理有两种方式，
+            如果type=”JDBC”则使用JdbcTransactionFactory事务工厂则MyBatis独立管理事务，
+            直接使用JDK提供的JDBC来管理事务的各个环节：提交、回滚、关闭等操作；
+            如果type=”MANAGED”则使用ManagedTransactionFactory事务工厂则MyBatis不在ORM层管理事务而是
+            将事务管理托付给其他框架，如Spring；
+            -->
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatistest?serverTimezone=GMT%2B8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123qwe"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="RoleMapper.xml"/>
+    </mappers>
+
+
+</configuration>

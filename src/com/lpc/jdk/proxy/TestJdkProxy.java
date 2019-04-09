@@ -1,4 +1,4 @@
-package com.lpc.test;
+package com.lpc.jdk.proxy;
 
 import com.lpc.jdk.proxy.HelloWorld;
 import com.lpc.jdk.proxy.HelloWorldImpl;

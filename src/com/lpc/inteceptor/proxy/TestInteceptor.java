@@ -1,6 +1,5 @@
-package com.lpc.test;
+package com.lpc.inteceptor.proxy;
 
-import com.lpc.inteceptor.proxy.InteceptorJdkProxy;
 import com.lpc.jdk.proxy.HelloWorld;
 import com.lpc.jdk.proxy.HelloWorldImpl;
 

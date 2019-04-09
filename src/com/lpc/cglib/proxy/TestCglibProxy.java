@@ -1,4 +1,4 @@
-package com.lpc.test;
+package com.lpc.cglib.proxy;
 
 import com.lpc.cglib.proxy.CglibProxyExample;
 import com.lpc.reflect.ReflectServiceImpl;
@@ -10,6 +10,6 @@ public class TestCglibProxy {
 
         ReflectServiceImpl reflectService = (ReflectServiceImpl) cglibProxyExample.getProxy(ReflectServiceImpl.class);
 
-        reflectService.sayHello("lpc");
+        reflectService.sayHello("lpc","lec");
     }
 }

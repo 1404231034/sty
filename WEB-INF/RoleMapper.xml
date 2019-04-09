@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lpc.mybatis.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="role">
+        <id column="ID" property="id"/>
+        <result column="NAME" property="name"/>
+        <result column="NOTE" property="note"/>
+        <result column="YEARS" property="years"/>
+    </resultMap>
+    <insert id="insertRole" parameterType="role">
+        insert into role(id,name,note,years) values (#{id},#{name},#{note},#{years});
+    </insert>
+
+    <delete id="deleteRole" parameterType="java.lang.String">
+        delete from role where id = #{id};
+    </delete>
+
+    <update id="updateRole" parameterType="role">
+        update role set name = #{name},note = #{note},years = #{years} where id = #{id};
+    </update>
+
+    <select id="list" resultMap="BaseResultMap" resultType="java.util.List">
+        select * from role where 1=1;
+    </select>
+</mapper>
