@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    <bean id="beannPostProcessor" class="com.lpc.spring.start1.BeanPostProcessorImpl"/>
+
+    <bean id="disposableBean" class="com.lpc.spring.start1.DisposableBeanImpl"/>
+
+    <bean id="source" class="com.lpc.spring.start1.Source">
+        <property name="fruit" value="rb"/>
+        <property name="sugar" value="more"/>
+        <property name="size" value="2"/>
+    </bean>
+
+    <bean id="juiceMaker2" class="com.lpc.spring.start1.JuiceMaker2" init-method="init" destroy-method="destory">
+        <property name="beverageShop" value="dd" />
+        <property name="source" ref="source" />
+    </bean>
+</beans>
