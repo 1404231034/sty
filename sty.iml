@@ -8,6 +8,7 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Maven: org.mybatis:mybatis:3.3.0" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -22,6 +23,5 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: cglib:cglib-nodep:3.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.3.0" level="project" />
   </component>
 </module>

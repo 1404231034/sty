@@ -19,9 +19,10 @@ public class Chapter3Main {
 
             RoleMapper mapper = sqlSession.getMapper(RoleMapper.class);
 
-            Role role = new Role("3333333", "wsy", "jhh", "4");
+            Role role = new Role("44444", "hs", "hhhr", "23");
 
-            mapper.updateRole(role);
+//            mapper.updateRole(role);
+            mapper.insertRole(role);
 
             List<Role> roles = mapper.list();
 
